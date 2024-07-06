@@ -1,5 +1,8 @@
-FROM eclipse-temurin:21
-EXPOSE 8080
-RUN mkdir /opt/app
-COPY ./target/weekly-planner-${APP_VERSION}.jar /opt/app
-CMD ["java", "-jar", "/opt/app/report-integrator-0.0.1.jar"]
+FROM eclipse-temurin:21-jre
+ARG JAR_FILE
+ADD ${JAR_FILE} app.jar
+ENTRYPOINT exec java \
+	-Djava.security.egd=file:/dev/./urandom \
+	-Dspring.profiles.active=$SPRING_PROFILES_ACTIVE \
+	$JAVA_ARGS \
+	-jar app.jar
