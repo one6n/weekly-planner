@@ -24,7 +24,7 @@ public class SwaggerConfig {
 	private String contactUrl;
 
 	@Bean
-	public OpenAPI springShopOpenAPI() {
+	OpenAPI springShopOpenAPI() {
 		Contact contact = new Contact();
 		contact.setName(contactName);
 		contact.setUrl(contactUrl);
