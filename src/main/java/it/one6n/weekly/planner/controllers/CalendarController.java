@@ -11,8 +11,8 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @RestController
-@RequestMapping(ControllersUtils.API_CONTROLLER_BASE_PATH)
-public class ApiController {
+@RequestMapping(ControllersUtils.CALENDAR_CONTROLLER_BASE_PATH)
+public class CalendarController {
 
 	@GetMapping("/example")
 	public ResponseEntity<Object> getExample() {
