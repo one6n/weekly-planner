@@ -4,10 +4,13 @@ import java.security.InvalidParameterException;
 import java.util.Date;
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import it.one6n.weekly.planner.entities.Calendar;
 import it.one6n.weekly.planner.entities.impl.CalendarImpl;
 import it.one6n.weekly.planner.factories.CalendarFactory;
 
+@Service // TODO remove after self bean injection implementation
 public class CalendarFactoryImpl implements CalendarFactory {
 
 	@Override

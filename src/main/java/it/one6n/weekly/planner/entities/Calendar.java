@@ -9,4 +9,8 @@ public interface Calendar {
 	Date getEndDate();
 
 	List<String> getParticipants();
+
+	// business logic on this entity
+	String buildId();
+
 }
